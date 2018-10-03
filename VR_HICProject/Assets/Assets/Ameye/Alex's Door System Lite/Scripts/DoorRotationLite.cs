@@ -44,6 +44,7 @@ public class DoorRotationLite : MonoBehaviour
 
     void Start()
     {
+
         gameObject.tag = "Door";
         RotationOffset = transform.rotation;
 
@@ -67,7 +68,7 @@ public class DoorRotationLite : MonoBehaviour
         float ScaleDoorX = transform.localScale.x;
         float ScaleDoorZ = transform.localScale.z;
 
-        // Create a placeholder/temporary object of the hinge's position/rotation
+        // Create a placeholder/temporary object of the hinge's position /rotation
         Vector3 HingePosCopy = hinge.transform.position;
         Vector3 HingeRotCopy = hinge.transform.localEulerAngles;
 
@@ -134,6 +135,8 @@ public class DoorRotationLite : MonoBehaviour
             cube.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
             cube.GetComponent<Renderer>().material.color = HingeColor;
         }
+
+        this.Move();
     }
 
     // Move Function
